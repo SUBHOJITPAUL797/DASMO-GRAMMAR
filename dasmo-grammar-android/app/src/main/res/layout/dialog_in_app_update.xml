@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/bg_floating_card"
+    android:padding="20dp">
+
+    <!-- Header Icon & Title -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:text="🚀"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:background="#1E293B" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="12dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvUpdateTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Update Available"
+                android:textColor="#F8FAFC"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvUpdateVersion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="Version v1.0.1 is ready"
+                android:textColor="#38BDF8"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Changelog Container -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="What's New:"
+        android:textColor="#94A3B8"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:maxHeight="160dp"
+        android:background="#1E293B"
+        android:padding="12dp">
+
+        <TextView
+            android:id="@+id/tvUpdateChangelog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="• Fixed Samsung Keyboard floating assistant vanishing issue.\n• Added GitHub Releases in-app updater.\n• Performance optimizations."
+            android:textColor="#E2E8F0"
+            android:textSize="13sp"
+            android:lineSpacingMultiplier="1.2" />
+    </ScrollView>
+
+    <!-- Size Info -->
+    <TextView
+        android:id="@+id/tvUpdateSize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Download Size: 27.7 MB"
+        android:textColor="#64748B"
+        android:textSize="11sp" />
+
+    <!-- Download Progress -->
+    <ProgressBar
+        android:id="@+id/pbDownloadUpdate"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:layout_marginTop="12dp"
+        android:visibility="gone"
+        android:max="100"
+        android:progress="0"
+        android:progressTint="#10B981" />
+
+    <TextView
+        android:id="@+id/tvDownloadStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:visibility="gone"
+        android:text="Downloading: 0%"
+        android:textColor="#10B981"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+    <!-- Action Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:orientation="horizontal"
+        android:gravity="end">
+
+        <Button
+            android:id="@+id/btnUpdateLater"
+            style="@style/Widget.Material3.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Later"
+            android:textColor="#94A3B8" />
+
+        <Button
+            android:id="@+id/btnUpdateNow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Update Now"
+            android:backgroundTint="#10B981"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</LinearLayout>

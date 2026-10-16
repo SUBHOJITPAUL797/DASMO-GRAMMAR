@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/llFloatingRoot"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="end">
+
+    <!-- Expandable Suggestion Card (Floating Popover) -->
+    <LinearLayout
+        android:id="@+id/cardFloatingExplanation"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:visibility="gone"
+        android:background="@drawable/bg_floating_card"
+        android:elevation="8dp"
+        android:orientation="vertical"
+        android:padding="14dp">
+
+        <!-- Card Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tvFloatingProblem"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="should of"
+                android:textColor="#F43F5E"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvFloatingCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Grammar"
+                android:textColor="#38BDF8"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:background="#1E293B"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="2dp" />
+
+            <ImageView
+                android:id="@+id/btnFloatingCloseCard"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="8dp"
+                android:padding="4dp"
+                android:src="@android:drawable/ic_menu_close_clear_cancel"
+                app:tint="#94A3B8" />
+        </LinearLayout>
+
+        <!-- Error Explanation Message -->
+        <TextView
+            android:id="@+id/tvFloatingMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="Use 'have' rather than 'of' here."
+            android:textColor="#E2E8F0"
+            android:textSize="13sp" />
+
+        <!-- Suggestions Strip -->
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:id="@+id/llFloatingSuggestions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" />
+        </HorizontalScrollView>
+    </LinearLayout>
+
+    <!-- Draggable Floating Bubble / Pill -->
+    <LinearLayout
+        android:id="@+id/llFloatingBubble"
+        android:layout_width="wrap_content"
+        android:layout_height="44dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="#1E293B"
+        android:paddingStart="6dp"
+        android:paddingEnd="12dp"
+        android:elevation="6dp">
+
+        <!-- Glowing Dasmo Badge Icon -->
+        <FrameLayout
+            android:layout_width="32dp"
+            android:layout_height="32dp">
+
+            <TextView
+                android:id="@+id/tvLogoIcon"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:text="D"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:gravity="center"
+                android:background="#10B981" />
+
+            <!-- Error Counter Badge -->
+            <TextView
+                android:id="@+id/tvBubbleBadgeCount"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_gravity="top|end"
+                android:text="1"
+                android:textSize="9sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:gravity="center"
+                android:background="#F43F5E" />
+        </FrameLayout>
+
+        <!-- Primary Quick Fix Text (or Status) -->
+        <TextView
+            android:id="@+id/tvBubblePrimaryFix"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Tap to fix"
+            android:textColor="#F8FAFC"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</LinearLayout>

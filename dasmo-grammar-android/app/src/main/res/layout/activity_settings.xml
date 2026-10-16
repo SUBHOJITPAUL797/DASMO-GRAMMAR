@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#11111B"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dasmo Settings"
+        android:textColor="#CDD6F4"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <!-- Dialect Section -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="ENGLISH DIALECT"
+        android:textColor="#A6ADC8"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:cardCornerRadius="12dp"
+        app:cardBackgroundColor="#181825"
+        app:strokeColor="#313244"
+        app:strokeWidth="1dp">
+
+        <Spinner
+            android:id="@+id/spinnerDialect"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:padding="8dp" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Personal Dictionary Section -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="PERSONAL DICTIONARY"
+        android:textColor="#A6ADC8"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/etNewWord"
+            android:layout_width="0dp"
+            android:layout_height="46dp"
+            android:layout_weight="1"
+            android:background="#181825"
+            android:hint="Add custom term or name..."
+            android:textColor="#CDD6F4"
+            android:textColorHint="#585B70"
+            android:paddingHorizontal="12dp"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/btnAddWord"
+            android:layout_width="wrap_content"
+            android:layout_height="46dp"
+            android:layout_marginStart="8dp"
+            android:text="Add"
+            android:backgroundTint="#10B981"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/lvDictionary"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="12dp"
+        android:background="#181825" />
+
+    <Button
+        android:id="@+id/btnClearDictionary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Clear Personal Dictionary"
+        android:backgroundTint="#313244"
+        android:textColor="#F38BA8" />
+
+    <Button
+        android:id="@+id/btnViewLogs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="🛠️ System Diagnostics &amp; Live Logs"
+        android:backgroundTint="#334155"
+        android:textColor="#38BDF8" />
+
+    <!-- App Updates Section -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="IN-APP UPDATES (GITHUB RELEASES)"
+        android:textColor="#A6ADC8"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:cardCornerRadius="12dp"
+        app:cardBackgroundColor="#181825"
+        app:strokeColor="#313244"
+        app:strokeWidth="1dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="14dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/tvCurrentVersion"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Installed: v1.0.0"
+                    android:textColor="#CDD6F4"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvRepoName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="GitHub Releases"
+                    android:textColor="#38BDF8"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnCheckUpdatesSettings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="🚀 Check for Fresh Updates"
+                android:backgroundTint="#10B981"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Privacy Guarantee Note -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="🔒 100% Offline Engine • Powered by Harper Core Rust/WASM • No Keystroke or Data Leaves Your Device"
+        android:textColor="#6C7086"
+        android:textSize="11sp" />
+
+</LinearLayout>

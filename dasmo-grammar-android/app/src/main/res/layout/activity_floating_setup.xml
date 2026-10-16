@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#0B0F17"
+    android:padding="20dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Use with Samsung Keyboard"
+        android:textColor="#F9FAFB"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="Keep Samsung Keyboard as your default keyboard. A floating Dasmo widget appears whenever you type in WhatsApp, Chrome, or Notes."
+        android:textColor="#9CA3AF"
+        android:textSize="13sp"
+        android:lineSpacingMultiplier="1.2" />
+
+    <!-- Step 1 Card: Display Over Other Apps -->
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:cardCornerRadius="16dp"
+        app:cardBackgroundColor="#111827"
+        app:strokeColor="#374151"
+        app:strokeWidth="1dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Step 1: Allow Floating Overlay"
+                android:textColor="#F9FAFB"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvOverlayStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Permission required"
+                android:textColor="#F59E0B"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/btnGrantOverlay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Grant Overlay Permission"
+                android:backgroundTint="#1F2937"
+                android:textColor="#F9FAFB" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Step 2 Card: Accessibility Service -->
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:cardCornerRadius="16dp"
+        app:cardBackgroundColor="#111827"
+        app:strokeColor="#374151"
+        app:strokeWidth="1dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Step 2: Enable Floating Assistant"
+                android:textColor="#F9FAFB"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvAccessibilityStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Turn on in Accessibility Settings"
+                android:textColor="#F59E0B"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/btnOpenAccessibility"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Open Accessibility Settings"
+                android:backgroundTint="#1F2937"
+                android:textColor="#F9FAFB" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Step 3 Sandbox Card -->
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:cardCornerRadius="16dp"
+        app:cardBackgroundColor="#111827"
+        app:strokeColor="#374151"
+        app:strokeWidth="1dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Step 3: Test with Samsung Keyboard"
+                android:textColor="#F9FAFB"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etFloatingSandbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="#1F2937"
+                android:padding="14dp"
+                android:hint="Type with Samsung Keyboard: 'Their going home'"
+                android:textColor="#F9FAFB"
+                android:textColorHint="#6B7280"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tvSandboxFeedback"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="💡 Ready: Type any mistake to see Dasmo detect it live."
+                android:textColor="#10B981"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <Button
+        android:id="@+id/btnDoneFloating"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Finish Setup"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:backgroundTint="#10B981"
+        android:textColor="#FFFFFF" />
+
+</LinearLayout>

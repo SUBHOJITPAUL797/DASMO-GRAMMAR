@@ -1,0 +1,31 @@
+# Gradle
+.gradle/
+build/
+**/build/
+
+# Local configuration
+local.properties
+
+# Android Studio / IntelliJ IDEA
+.idea/
+*.iml
+.navigation/
+captures/
+.externalNativeBuild/
+.cxx/
+
+# Temporary / upstream extracts
+*.tgz
+*.zip
+*.tar.gz
+harper-2.12.0/
+package/
+/dasmo-engine.bundle.js
+
+# Output artifacts
+*.apk
+*.aab
+
+# System files
+.DS_Store
+Thumbs.db

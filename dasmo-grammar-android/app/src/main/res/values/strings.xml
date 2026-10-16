@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Dasmo Grammar</string>
+    <string name="ime_name">Dasmo Grammar Keyboard</string>
+    <string name="floating_assistant_name">Dasmo Floating Assistant</string>
+    <string name="accessibility_service_description">Dasmo Grammar Floating Assistant provides real-time grammar and spelling corrections while typing on your existing Samsung Keyboard, Gboard, or any other keyboard without replacing it.</string>
+    <string name="check_with_dasmo">Check with Dasmo Grammar</string>
+    <string name="subtype_en_us">English (US)</string>
+</resources>

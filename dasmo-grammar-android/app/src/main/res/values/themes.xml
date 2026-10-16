@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.DasmoGrammar" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorSecondary">@color/accent</item>
+        <item name="android:statusBarColor">@color/surface_dark</item>
+        <item name="android:navigationBarColor">@color/surface_dark</item>
+        <item name="android:windowBackground">@color/bg_dark</item>
+    </style>
+
+    <style name="Theme.DasmoGrammar.Dialog" parent="Theme.Material3.Dark.Dialog">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="android:windowBackground">@color/bg_dark</item>
+    </style>
+
+    <style name="DasmoDialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/dialog_enter</item>
+        <item name="android:windowExitAnimation">@anim/dialog_exit</item>
+    </style>
+</resources>

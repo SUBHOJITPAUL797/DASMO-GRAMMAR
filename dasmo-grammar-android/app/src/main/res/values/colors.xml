@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Brand Primary: Dasmo Emerald -->
+    <color name="primary">#10B981</color>
+    <color name="primary_light">#34D399</color>
+    <color name="primary_dark">#059669</color>
+    <color name="primary_container">#064E3B</color>
+
+    <!-- Secondary / Accent: Electric Cyan & Royal Indigo -->
+    <color name="accent">#38BDF8</color>
+    <color name="secondary">#38BDF8</color>
+    <color name="accent_purple">#818CF8</color>
+    <color name="accent_amber">#F59E0B</color>
+    <color name="accent_rose">#F43F5E</color>
+
+    <!-- Dark Theme Backgrounds & Surfaces (Obsidian Slate) -->
+    <color name="bg_dark">#0B0F17</color>
+    <color name="surface_dark">#111827</color>
+    <color name="card_dark">#1F2937</color>
+    <color name="card_stroke">#374151</color>
+    <color name="key_normal">#1E293B</color>
+    <color name="key_pressed">#334155</color>
+
+    <!-- Typography -->
+    <color name="text_primary">#F9FAFB</color>
+    <color name="text_secondary">#9CA3AF</color>
+    <color name="text_muted">#6B7280</color>
+
+    <!-- Status Colors -->
+    <color name="correctness">#F43F5E</color>
+    <color name="clarity">#F59E0B</color>
+    <color name="engagement">#38BDF8</color>
+    <color name="delivery">#A855F7</color>
+</resources>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#0F172A"
+    android:padding="16dp">
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="System &amp; Engine Logs"
+            android:textColor="#F8FAFC"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/btnRefreshLogs"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:text="Refresh"
+            android:textSize="12sp"
+            android:backgroundTint="#334155"
+            android:textColor="#F8FAFC" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Live execution diagnostic traces for troubleshooting &amp; device verification."
+        android:textColor="#94A3B8"
+        android:textSize="12sp" />
+
+    <!-- Terminal-like Log Viewer Box -->
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="16dp"
+        app:cardCornerRadius="12dp"
+        app:cardBackgroundColor="#020617"
+        app:strokeColor="#1E293B"
+        app:strokeWidth="1dp">
+
+        <ScrollView
+            android:id="@+id/svLogs"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="12dp">
+
+            <TextView
+                android:id="@+id/tvLogOutput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#38BDF8"
+                android:textSize="11sp"
+                android:fontFamily="monospace"
+                android:textIsSelectable="true" />
+        </ScrollView>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Actions -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnClearLogs"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Clear Logs"
+            android:backgroundTint="#334155"
+            android:textColor="#F43F5E" />
+
+        <Button
+            android:id="@+id/btnCopyReport"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1.6"
+            android:text="Copy Full Report"
+            android:backgroundTint="#10B981"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+
+</LinearLayout>

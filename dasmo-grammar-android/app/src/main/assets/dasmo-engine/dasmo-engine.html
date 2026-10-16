@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Dasmo Grammar Engine Host</title>
+</head>
+<body>
+  <script src="dasmo-engine.bundle.js"></script>
+  <script>
+    console.log("Dasmo Grammar Engine HTML Host Loaded successfully");
+    if (window.DasmoEngine && window.DasmoEngine.init) {
+      window.DasmoEngine.init('American');
+    }
+  </script>
+</body>
+</html>
